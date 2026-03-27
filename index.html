@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <title>Uptime Status</title>
+  <script src="./config.js"></script>
+  <script defer="defer" src="./static/js/main.a57ef58a.js"></script>
+  <link href="./static/css/main.e4003dc1.css" rel="stylesheet">
+  <!-- Umami -->
+  <script defer src="./static/js/script.js" data-website-id="d2517b7e-0fd1-4a06-bbdd-47d05878b694"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    // 动态为返回主页按钮添加CSS类
+    window.addEventListener('DOMContentLoaded', function() {
+      // 等待React应用渲染完成
+      setTimeout(function() {
+        // 查找所有导航链接并检查文本内容
+        const navLinks = document.querySelectorAll('#header .navi a');
+        navLinks.forEach(function(link) {
+          if (link.textContent.trim() === '返回主页') {
+            link.classList.add('home-button');
+
+            // 添加一个home图标
+            link.innerHTML = '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 10.5L12 3L21 10.5V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' + link.textContent;
+          }
+        });
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
